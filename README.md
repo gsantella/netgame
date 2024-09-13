@@ -7,6 +7,7 @@
 ## install
   ```
   git clone <this-repo-code-url>
+  cd netgame
   npm install
   npm run start:server
   npm run start:client
