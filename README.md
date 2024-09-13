@@ -1,11 +1,16 @@
 # netgame
-## Websocket message passing game
+> websocket message passing game
 
-## Requirements
-  - Node for server and client
+## requirements
+  ```Node.js```
 
-## Install
-  - git clone <this-repo-code-url>
-  - npm install
-  - npm run start:server
-  - npm run start:client
+## install
+  ```
+  git clone <this-repo-code-url>
+  npm install
+  npm run start:server
+  npm run start:client
+  ```
+
+## demo
+  ```coming soon```
