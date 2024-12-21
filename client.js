@@ -32,10 +32,11 @@ const gameQuestions = [
 const connectionResponses = await prompts(connectionQuestions)
 
 // connect to server with user connection responses
-const socket = io("http://127.0.0.1:3000", {query:`clientName=${connectionResponses.clientName}&clientColor=${connectionResponses.clientColor}`})
+const socket = io("http://localhost:3000", {query:`clientName=${connectionResponses.clientName}&clientColor=${connectionResponses.clientColor}`})
 
 socket.on("user:new", (clientName) => {
-    //not implemented
+  //not implemented
+  console.log(clientName)
 })
 
 const onCancel = prompt => {
@@ -49,7 +50,7 @@ while (true) {
 
     // ask game question(s)
     const message = await prompts(gameQuestions, { onCancel });
-    
+
     // send a signal to the server with data
     // wireshark filter: websocket.payload.text contains "signal"
     socket.emit("signal", message.message)

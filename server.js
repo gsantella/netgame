@@ -17,7 +17,7 @@ io.on("connection", (socket) => {
   
   // broadcast to all connected clients someone has joined
   io.emit('user:new', clientName)
-
+  
   // process when a client sends a signal
   socket.on("signal", (msg) => {
     console.log(`${clientName}(${socket.id}) sent a ${chalkCustomColor('signal')}: ${msg}`)
